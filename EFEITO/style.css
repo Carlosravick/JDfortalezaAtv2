@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.form-control {
+    position: relative;
+    width: 14rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px rgb(12, 12, 12) solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: rgb(7, 0, 12);
+}
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: cyan;
+}
+.form-control label {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    pointer-events: none;
+}
+.form-control label span {
+    display: inline-block;
+    font-size: 15px;
+    min-width: 5px;
+    color: rgb(6, 81, 100);
+    transition: 0.3s cubic-bezier(0.68,-0.55, 0.265, 1.55);
+}
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: rgb(0, 47, 255);
+    transform: translateY(-15px);
+}
